@@ -10,7 +10,7 @@ jobs:
     - name: Welcome Message
       run: echo "My first GitHub Actions Job"
 
-    - name: List files in repo
+    - name: List files
       run: ls
 
     - name: Read file
