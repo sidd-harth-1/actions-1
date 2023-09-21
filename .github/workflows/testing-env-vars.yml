@@ -1,0 +1,22 @@
+name: testttttttttttt
+
+on:  
+  push
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v4
+    
+    - name: ls
+      run: cat app.js
+
+    - name: env
+      env:
+        MONGO_PASSWORD: 123123123
+        MONGO_USERNAME: 32424234234234
+        MONGO_URI: mongodb+srv://supercluster.d83jj.mongodb.net/superData
+      run: |
+        cat app.js
