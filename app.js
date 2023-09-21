@@ -16,7 +16,9 @@ const dbPassword = process.env.MONGO_PASSWORD;
 const uri = `mongodb+srv://${dbUser}:${dbPassword}@${clusterAddress}/?retryWrites=true&w=majority`;
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
-  console.log(`is it workingggggggggggggggggggggggggggggggggggggggggggggggggg ${uri}`);
+  console.log(`clusterAddress ${clusterAddress}`);
+  console.log(`dbUser ${dbUser}`);
+  console.log(`dbPassword ${dbPassword}`);
 });
 
 
