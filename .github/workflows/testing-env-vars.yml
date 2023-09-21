@@ -18,16 +18,16 @@ jobs:
     #   - name: NPM Install
     #     run: npm install
      
-      - name: NPM Testing
-        run: node app.js
-        
+    #   - name: NPM Testing
+    #     run: node app.js
+
     # - name: ls
     #   run: cat app.js
 
-    # - name: env
-    #   env:
-    #     MONGO_PASSWORD: 123123123
-    #     MONGO_USERNAME: 32424234234234
-    #     MONGO_URI: mongodb+srv://supercluster.d83jj.mongodb.net/superData
-    #   run: |
-    #     cat app.js
+      - name: env
+        env:
+            MONGO_PASSWORD: 123123123
+            MONGO_USERNAME: 32424234234234
+            MONGO_URI: mongodb+srv://supercluster.d83jj.mongodb.net/superData
+        run: |
+            node app.js

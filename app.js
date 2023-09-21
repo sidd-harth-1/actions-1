@@ -9,16 +9,17 @@ const server = http.createServer((req, res) => {
   res.end('Hello World');
 });
  
+const clusterAddress = process.env.MONGO_URI;
+const dbUser = process.env.MONGO_USERNAME;
+const dbPassword = process.env.MONGO_PASSWORD;
+
+const uri = `mongodb+srv://${dbUser}:${dbPassword}@${clusterAddress}/?retryWrites=true&w=majority`;
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
+  console.log(`is it workingggggggggggggggggggggggggggggggggggggggggggggggggg ${uri}`);
 });
 
-// const clusterAddress = process.env.MONGO_URI;
-// const dbUser = process.env.MONGO_USERNAME;
-// const dbPassword = process.env.MONGO_PASSWORD;
 
-
-// const uri = `mongodb+srv://${dbUser}:${dbPassword}@${clusterAddress}/?retryWrites=true&w=majority`;
 
 // mongoose.connect(process.env.MONGO_URI, {
 //     user: process.env.MONGO_USERNAME,
