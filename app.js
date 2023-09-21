@@ -17,7 +17,7 @@ const uri = `mongodb+srv://${dbUser}:${dbPassword}@${clusterAddress}/?retryWrite
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
   console.log(`clusterAddress ${clusterAddress}`);
-  console.log(`dbUser ${dbUser}`);
+  console.log(`dbUser -`+ process.env.MONGO_USERNAME);
   console.log(`dbPassword ${dbPassword}`);
 });
 
