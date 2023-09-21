@@ -1,6 +1,6 @@
-mongoose.connect($MONGO_URI, {
-    user: $MONGO_USERNAME,
-    pass: $MONGO_PASSWORD,
+mongoose.connect(process.env.MONGO_URI, {
+    user: process.env.MONGO_USERNAME,
+    pass: process.env.MONGO_PASSWORD,
     useNewUrlParser: true,
     useUnifiedTopology: true
 }
