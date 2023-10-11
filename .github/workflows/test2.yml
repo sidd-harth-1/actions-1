@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo $abc
-          echo ${{ env.abc }}
+          echo $ABC
+          echo ${{ env.ABC }}
