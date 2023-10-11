@@ -1,0 +1,12 @@
+name: Test variables
+    
+on:  
+  workflow_dispatch:
+
+jobs:
+  de:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo $abc
+          echo ${{ env.abc }}
